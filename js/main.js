@@ -12,9 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.getElementById('main-nav');
 
     if (mobileMenuButton && mainNav) {
-        mobileMenuButton.addEventListener('click', () => {
+        mobileMenuButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            event.stopPropagation();
             const isOpen = mainNav.classList.toggle('is-open');
-            mobileMenuButton.setAttribute('aria-expanded', isOpen);
+            mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
             mobileMenuButton.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
             document.body.style.overflow = isOpen ? 'hidden' : '';
         });
@@ -33,7 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Cerrar menú al hacer clic fuera
         document.addEventListener('click', (event) => {
-            if (!mainNav.contains(event.target) && !mobileMenuButton.contains(event.target) && mainNav.classList.contains('is-open')) {
+            const target = event.target;
+            if (mainNav.classList.contains('is-open') && 
+                !mainNav.contains(target) && 
+                !mobileMenuButton.contains(target)) {
+                mainNav.classList.remove('is-open');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+                mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Escuchar cambios de tamaño de ventana para mantener consistencia
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768 && mainNav.classList.contains('is-open')) {
                 mainNav.classList.remove('is-open');
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
                 mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';

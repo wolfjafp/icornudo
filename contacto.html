@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Hablemos | iCornudo</title>
+    <meta name="description" content="Contacta con iCornudo para consultas profesionales, colaboraciones o propuestas de negocio. Para unirte a la comunidad, visita nuestros canales de Telegram y X.">
+    <meta name="keywords" content="contacto icornudo, contacto profesional, colaboraciones, negocio, comprar icornudo, email icornudo, contactar icornudo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://icornudo.com/contacto.html">
+    <!-- Favicon, Fonts, Font Awesome, CSS (igual que index.html) -->
+    <link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="preload">
+     <header class="main-header sticky-top">
+        <div class="container">
+             <a class="logo" href="index.html" aria-label="iCornudo - Inicio">iCornudo</a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="el-universo.html">El Universo</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+             <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Abrir menú" aria-controls="main-nav" aria-expanded="false"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header section-padding light-section text-center">
+            <div class="container">
+                <h1 class="animate-on-load">Hablemos...</h1>
+                <p class="subtitle animate-on-load delay-1">¿Propuestas, colaboraciones, interés en el proyecto? Usa este formulario.</p>
+                <p class="animate-on-load delay-2"><strong>Recuerda: La comunidad y el contenido diario viven en <a href="https://t.me/icornudo" target="_blank">Telegram</a> y <a href="https://x.com/icornudo" target="_blank">X</a>.</strong></p>
+            </div>
+        </section>
+
+        <section class="contact-form-section section-padding">
+            <div class="container">
+                <div class="contact-form-wrapper fade-in-section">
+                    <h2 class="section-title text-center">Tu Mensaje Directo</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Tu Nombre:</label>
+                            <input type="text" id="name" name="name" required placeholder="Nombre Apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Tu Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Tu País:</label>
+                            <input type="text" id="country" name="country" required placeholder="País de residencia">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tu Mensaje:</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Escribe aquí tu consulta profesional, propuesta o interés..."></textarea>
+                        </div>
+
+                        <!-- Botón modificado para la acción JS -->
+                        <button type="submit" id="submit-contact-telegram" class="cta-button primary full-width">
+                            <i class="fas fa-paper-plane"></i> Enviar Consulta vía Telegram
+                        </button>
+                    </form>
+
+                    <!-- Nota Explicativa para el método Telegram -->
+                    <div id="telegram-info" class="telegram-explanation text-center" style="margin-top: var(--spacing-xl);">
+                        <h4><i class="fas fa-info-circle"></i> ¿Cómo funciona esto?</h4>
+                        <p>Al hacer clic en "Enviar Consulta vía Telegram":</p>
+                        <ol style="text-align: left; max-width: 50ch; margin: var(--spacing-m) auto; padding-left: var(--spacing-l);">
+                            <li>Copiaremos tu mensaje formateado al portapapeles.</li>
+                            <li>Abriremos automáticamente la app de Telegram en un chat contigo (@zapaton69).</li>
+                            <li><strong>Importante:</strong> Deberás <strong>pegar manualmente</strong> (Ctrl+V o Cmd+V) el mensaje en el chat de Telegram y presionar 'Enviar' allí.</li>
+                        </ol>
+                        <p>Este método asegura que tu consulta llegue directamente sin necesidad de email, pero requiere ese último paso manual.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+     <footer class="main-footer dark-section">
+        <!-- ... (Mismo Footer que index.html, con 4 columnas) ... -->
+         <div class="container">
+            <div class="footer-content">
+                <div class="footer-col footer-col-brand"><h3 class="footer-title">iCornudo</h3><p class="footer-tagline">Fantasías. Conexión. Provocación.</p><div class="footer-social-icons"><a href="https://t.me/icornudo" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a><a href="https://x.com/icornudo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></div></div>
+                 <div class="footer-col"><h3 class="footer-title">Explora</h3><ul class="footer-links"><li><a href="index.html">Inicio</a></li><li><a href="el-universo.html">El Universo iCornudo</a></li><li><a href="contacto.html">Contacto Profesional</a></li></ul></div>
+                 <div class="footer-col"><h3 class="footer-title">Descubre Más</h3><ul class="footer-links"><li><a href="explorando-el-cuckolding.html">¿Qué es el Cuckolding?</a></li><li><a href="el-placer-compartido-beneficios.html">Beneficios y Placer Compartido</a></li></ul></div>
+                 <div class="footer-col"><h3 class="footer-title">Legal</h3><ul class="footer-links"><li><a href="politica-privacidad.html">Política de Privacidad</a></li><li><a href="politica-cookies.html">Política de Cookies</a></li><li><span class="age-notice"><i class="fas fa-user-shield"></i> Sitio para +18 años</span></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; <span id="current-year"></span> iCornudo. Todos los derechos reservados.</p><p class="disclaimer">El acceso a este sitio web y a sus redes vinculadas implica la aceptación de nuestras políticas y la confirmación explícita de tu mayoría de edad legal.</p></div>
+        </div>
+    </footer>
+
+      <!-- Cookie Consent Banner HTML -->
+    <div id="cookie-consent-banner" class="cookie-consent-banner" role="dialog" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-desc" hidden>
+        <div class="container cookie-content">
+            <div class="cookie-text">
+                <h4 id="cookie-consent-title">Tu Privacidad es Importante</h4>
+                <p id="cookie-consent-desc">Usamos cookies esenciales para el funcionamiento del sitio. Al continuar, aceptas su uso. Consulta nuestra <a href="politica-cookies.html" aria-label="Leer política de cookies">Política de Cookies</a> para más detalles.</p>
+            </div>
+            <div class="cookie-actions">
+                <button id="accept-cookies" class="cta-button accept small">Entendido</button>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal Oculto para Confirmación de Copia -->
+    <div id="copy-confirm-modal" class="copy-confirm-modal">
+        <i class="fas fa-check-circle"></i> ¡Mensaje copiado! Abre Telegram y pégalo.
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

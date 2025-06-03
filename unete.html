@@ -38,7 +38,7 @@
     <style>
         /* Estilos específicos para la página de unión */
         .join-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/join-hero.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/join-hero.jpg');
             background-size: cover;
             background-position: center;
             height: 60vh;
@@ -121,6 +121,7 @@
         .join-card .cta-button {
             width: 100%;
             text-align: center;
+            margin-top: 20px;
         }
         
         .join-card.premium .cta-button {
@@ -151,10 +152,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            color: var(--color-primary);
         }
         
         .faq-question i {
             transition: all 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
         }
         
         .faq-answer {
@@ -164,23 +170,19 @@
             transition: all 0.3s ease;
         }
         
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-        
         .faq-item.active .faq-answer {
             padding: 0 20px 20px;
-            max-height: 1000px;
+            max-height: 500px;
         }
         
         .testimonial-join {
-            font-style: italic;
-            padding: 30px;
             background-color: var(--color-light);
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-top: 50px;
+            padding: 40px;
+            margin: 50px 0;
             position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            font-style: italic;
         }
         
         .testimonial-join::before {
@@ -201,7 +203,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="container header-container">
             <a href="index.html" class="logo">ICORN<span>UDO</span></a>
@@ -212,101 +213,234 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html#beneficios">Beneficios</a></li>
-                    <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
-                    <li><a href="index.html#telegram">Telegram</a></li>
-                    <li><a href="index.html#testimonios">Testimonios</a></li>
-                    <li><a href="unete.html" class="nav-cta">Únete</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="el-universo.html">Sobre Nosotros</a></li>
+                    <li><a href="explorando-el-cuckolding.html">¿Qué es el Cuckolding?</a></li>
+                    <li><a href="el-placer-compartido-beneficios.html">Beneficios</a></li>
+                    <li><a href="unete.html" class="active">Únete</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Join Hero Section -->
-    <section class="join-hero">
-        <div class="container">
-            <div class="join-hero-content animate-on-scroll">
-                <h1>Únete a la experiencia ICORNUDO</h1>
-                <p>Forma parte de la comunidad más grande y respetada de cuckolding y hotwife en español. Miles de personas ya están disfrutando de este espacio único.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="join-hero">
+            <div class="container">
+                <div class="join-hero-content">
+                    <h1>Únete a la mejor comunidad de Cuckolding y Hotwife</h1>
+                    <p>Descubre un espacio seguro donde compartir experiencias, aprender y conectar con personas afines</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Join Options Section -->
-    <section class="join-options">
-        <div class="container">
-            <div class="section-title">
-                <h2>Elige tu forma de participar</h2>
-                <p>Tenemos diferentes opciones para que encuentres la que mejor se adapte a tus preferencias</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="join-card animate-on-scroll">
-                        <div class="join-card-icon">
-                            <i class="fab fa-telegram"></i>
+        <!-- Join Options Section -->
+        <section class="join-options">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Elige tu forma de participar</h2>
+                    <p>Tenemos diferentes opciones para que encuentres la que mejor se adapte a tus preferencias</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="join-card animate-on-scroll">
+                            <div class="join-card-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <h3>Canal Principal</h3>
+                            <p>Nuestro canal de contenido donde compartimos material seleccionado, historias reales y experiencias de la comunidad.</p>
+                            
+                            <div class="join-features">
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Contenido diario seleccionado</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Historias reales y experiencias</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Material compartido por la comunidad</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Acceso a recursos educativos</span>
+                                </div>
+                            </div>
+                            
+                            <a href="https://t.me/+nY1CZhdk3PwyY2Yx" class="cta-button" target="_blank" aria-label="Unirse al Canal de Telegram ICORNUDO">
+                                <i class="fab fa-telegram"></i> Unirse al Canal
+                            </a>
                         </div>
-                        <h3>Canal Principal</h3>
-                        <p>Nuestro canal de contenido donde compartimos material seleccionado, historias reales y experiencias de la comunidad.</p>
-                        
-                        <div class="join-features">
-                            <div class="join-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Contenido diario seleccionado</span>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="join-card animate-on-scroll">
+                            <div class="join-card-icon">
+                                <i class="fas fa-users"></i>
                             </div>
-                            <div class="join-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Historias reales y experiencias</span>
+                            <h3>Grupo de Discusión</h3>
+                            <p>Un espacio interactivo donde puedes conversar con otros miembros, hacer preguntas y compartir experiencias en tiempo real.</p>
+                            
+                            <div class="join-features">
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Interacción en tiempo real</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Compartir experiencias y dudas</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Conectar con personas afines</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Moderación activa y respetuosa</span>
+                                </div>
                             </div>
-                            <div class="join-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Material compartido por la comunidad</span>
-                            </div>
-                            <div class="join-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Acceso a recursos educativos</span>
-                            </div>
+                            
+                            <a href="https://t.me/+84TyJvA6VdA4YTVh" class="cta-button premium" target="_blank" aria-label="Unirse al Grupo de Telegram ICORNUDO">
+                                <i class="fas fa-users"></i> Unirse al Grupo
+                            </a>
                         </div>
-                        
-                        <a href="https://t.me/+nY1CZhdk3PwyY2Yx" class="cta-button" target="_blank">
-                            <i class="fab fa-telegram"></i> Unirse al Canal
-                        </a>
                     </div>
                 </div>
                 
-                <div class="col-md-6">
-                    <div class="join-card animate-on-scroll">
-                        <div class="join-card-icon">
-                            <i class="fas fa-users"></i>
+                <div id="vip" class="row mt-5">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="join-card premium animate-on-scroll">
+                            <div class="join-card-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3>Grupo VIP (Próximamente)</h3>
+                            <p>Una experiencia exclusiva para miembros verificados. Contenido premium, eventos especiales y conexiones de mayor calidad.</p>
+                            
+                            <div class="join-features">
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Verificación de miembros para mayor seguridad</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Contenido exclusivo de alta calidad</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Eventos especiales y encuentros</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Atención personalizada</span>
+                                </div>
+                                <div class="join-feature">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Comunidad más selecta y comprometida</span>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="cta-button disabled">
+                                <i class="fas fa-crown"></i> Próximamente
+                            </a>
+                            <p class="text-center mt-3"><small>Déjanos tu email para ser notificado cuando esté disponible</small></p>
+                            <form class="newsletter-form mt-3">
+                                <input type="email" placeholder="Tu email" required>
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
                         </div>
-                        <h3>Grupo de Discusión</h3>
-                        <p>Un espacio interactivo donde puedes conversar con otros miembros, hacer preguntas y compartir experiencias en tiempo real.</p>
-                        
-                        <div class="join-features">
-                            <div class="join-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Interacción en tiempo real</span>
-                            </div>
-                            <div class="join-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Compartir experiencias y dudas</span>
-                            </div>
-                            <div class="join-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Conectar con personas afines</span>
-                            </div>
-                            <div class="join-feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Moderación activa y respetuosa</span>
-                            </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-join animate-on-scroll">
+                    <p>"Unirme a ICORNUDO fue un punto de inflexión en mi vida. Aquí encontré un espacio donde puedo ser yo mismo, sin juicios ni tabúes. La comunidad es respetuosa, el contenido es de calidad y las conexiones son reales. Si estás dudando, te animo a dar el paso. No te arrepentirás."</p>
+                    <p class="text-right mt-3"><strong>— Miguel, miembro desde 2021</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Preguntas Frecuentes</h2>
+                    <p>Resolvemos tus dudas sobre nuestra comunidad</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Es completamente anónimo participar en los grupos?</span>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        
-                        <a href="https://t.me/+84TyJvA6VdA4YTVh" class="cta-button" target="_blank">
+                        <div class="faq-answer">
+                            <p>Sí, Telegram permite usar pseudónimos y no es necesario compartir tu número de teléfono. Puedes participar con el nivel de anonimato que te resulte cómodo. Nuestra comunidad respeta la privacidad de todos los miembros.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Hay algún costo por unirse a la comunidad?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, tanto el canal principal como el grupo de discusión son completamente gratuitos. En el futuro, el grupo VIP para miembros verificados podría tener algún costo asociado para garantizar la calidad y exclusividad.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Qué tipo de contenido puedo esperar?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>En nuestros canales encontrarás contenido relacionado con el cuckolding y hotwife: historias reales, experiencias compartidas, material visual (siempre con consentimiento), recursos educativos y conversaciones sobre estos temas. Todo el contenido es para adultos y se comparte en un ambiente de respeto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Puedo participar si soy nuevo en este mundo?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>¡Absolutamente! Muchos de nuestros miembros están explorando o son curiosos sobre estos temas. Tenemos recursos para principiantes y la comunidad siempre está dispuesta a responder preguntas y ofrecer orientación de manera respetuosa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Cómo se modera la comunidad?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Contamos con un equipo de moderadores que aseguran que se respeten las normas de la comunidad. No toleramos faltas de respeto, acoso, contenido no consentido o cualquier comportamiento que haga sentir incómodos a otros miembros. Nuestro objetivo es mantener un espacio seguro y agradable para todos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <h2>La comunidad te está esperando</h2>
+                    <p>No esperes más para formar parte de esta experiencia única</p>
+                    <div class="cta-buttons">
+                        <a href="https://t.me/+nY1CZhdk3PwyY2Yx" class="cta-button" target="_blank" aria-label="Unirse al Canal de Telegram ICORNUDO">
+                            <i class="fab fa-telegram"></i> Unirse al Canal
+                        </a>
+                        <a href="https://t.me/+84TyJvA6VdA4YTVh" class="cta-button secondary" target="_blank" aria-label="Unirse al Grupo de Telegram ICORNUDO">
                             <i class="fas fa-users"></i> Unirse al Grupo
                         </a>
                     </div>
                 </div>
             </div>
+        </section>
             
             <div id="vip" class="row mt-5">
                 <div class="col-md-8 offset-md-2">
@@ -356,88 +490,26 @@
                 <p>"Unirme a ICORNUDO fue un punto de inflexión en mi vida. Aquí encontré un espacio donde puedo ser yo mismo, sin juicios ni tabúes. La comunidad es respetuosa, el contenido es de calidad y las conexiones son reales. Si estás dudando, te animo a dar el paso. No te arrepentirás."</p>
                 <p class="text-right mt-3"><strong>— Miguel, miembro desde 2021</strong></p>
             </div>
-        </div>
-    </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Preguntas Frecuentes</h2>
-                <p>Resolvemos tus dudas sobre nuestra comunidad</p>
-            </div>
-            
-            <div class="faq-container">
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>¿Es completamente anónimo participar en los grupos?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sí, Telegram permite usar pseudónimos y no es necesario compartir tu número de teléfono. Puedes participar con el nivel de anonimato que te resulte cómodo. Nuestra comunidad respeta la privacidad de todos los miembros.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>¿Hay algún costo por unirse a la comunidad?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>No, tanto el canal principal como el grupo de discusión son completamente gratuitos. En el futuro, el grupo VIP para miembros verificados podría tener algún costo asociado para garantizar la calidad y exclusividad.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>¿Qué tipo de contenido puedo esperar?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>En nuestros canales encontrarás contenido relacionado con el cuckolding y hotwife: historias reales, experiencias compartidas, material visual (siempre con consentimiento), recursos educativos y conversaciones sobre estos temas. Todo el contenido es para adultos y se comparte en un ambiente de respeto.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>¿Puedo participar si soy nuevo en este mundo?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>¡Absolutamente! Muchos de nuestros miembros están explorando o son curiosos sobre estos temas. Tenemos recursos para principiantes y la comunidad siempre está dispuesta a responder preguntas y ofrecer orientación de manera respetuosa.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item animate-on-scroll">
-                    <div class="faq-question">
-                        <span>¿Cómo se modera la comunidad?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Contamos con un equipo de moderadores que aseguran que se respeten las normas de la comunidad. No toleramos faltas de respeto, acoso, contenido no consentido o cualquier comportamiento que haga sentir incómodos a otros miembros. Nuestro objetivo es mantener un espacio seguro y agradable para todos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Final CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content animate-on-scroll">
-                <h2>La comunidad te está esperando</h2>
-                <p>No esperes más para formar parte de esta experiencia única</p>
-                <div class="cta-buttons">
-                    <a href="https://t.me/+nY1CZhdk3PwyY2Yx" class="cta-button" target="_blank">
-                        <i class="fab fa-telegram"></i> Unirse al Canal
-                    </a>
-                    <a href="https://t.me/+84TyJvA6VdA4YTVh" class="cta-button secondary" target="_blank">
-                        <i class="fas fa-users"></i> Unirse al Grupo
-                    </a>
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <h2>La comunidad te está esperando</h2>
+                    <p>No esperes más para formar parte de esta experiencia única</p>
+                    <div class="cta-buttons">
+                        <a href="https://t.me/+nY1CZhdk3PwyY2Yx" class="cta-button" target="_blank" aria-label="Unirse al Canal de Telegram ICORNUDO">
+                            <i class="fab fa-telegram"></i> Unirse al Canal
+                        </a>
+                        <a href="https://t.me/+84TyJvA6VdA4YTVh" class="cta-button secondary" target="_blank" aria-label="Unirse al Grupo de Telegram ICORNUDO">
+                            <i class="fas fa-users"></i> Unirse al Grupo
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -446,9 +518,9 @@
                 <div class="footer-logo">ICORN<span>UDO</span></div>
                 <p>La comunidad líder en español dedicada al cuckolding, hotwife y fantasías compartidas.</p>
                 <div class="footer-social">
-                    <a href="https://t.me/+nY1CZhdk3PwyY2Yx" target="_blank"><i class="fab fa-telegram"></i></a>
-                    <a href="https://x.com/icornudox" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://t.me/zapaton69" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <a href="https://t.me/+nY1CZhdk3PwyY2Yx" target="_blank" aria-label="Canal de Telegram ICORNUDO"><i class="fab fa-telegram"></i></a>
+                    <a href="https://x.com/icornudox" target="_blank" aria-label="Perfil de X (Twitter) ICORNUDO"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:contacto@icornudo.com" target="_blank" aria-label="Contacto por email ICORNUDO"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
             <div class="footer-links">
@@ -487,11 +559,12 @@
     </footer>
 
     <!-- Botón Volver Arriba -->
-    <a href="#" class="scroll-top">
+    <a href="#" class="scroll-top" aria-label="Volver arriba">
         <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- JavaScript -->
+    <script src="scripts/utils.js"></script>
     <script src="js/main.js"></script>
     <script>
         // Script específico para la página de unión

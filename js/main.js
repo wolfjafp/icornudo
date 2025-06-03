@@ -4,6 +4,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Cargar utilidades
+    const utils = window.ICORNUDO && window.ICORNUDO.utils;
     // Navegación responsive
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('nav');
@@ -39,57 +41,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Animación de aparición al hacer scroll
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-    
-    function checkScroll() {
-        const triggerBottom = window.innerHeight * 0.8;
+    // Inicializar animaciones al hacer scroll
+    if (utils && utils.initScrollAnimations) {
+        utils.initScrollAnimations();
+    } else {
+        // Fallback si no se cargaron las utilidades
+        const animateElements = document.querySelectorAll('.animate-on-scroll');
         
-        animateElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
+        function checkScroll() {
+            const triggerBottom = window.innerHeight * 0.8;
             
-            if (elementTop < triggerBottom) {
-                element.classList.add('visible');
-            }
-        });
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Verificar elementos al cargar la página
+        checkScroll();
+        
+        // Verificar elementos al hacer scroll
+        window.addEventListener('scroll', checkScroll);
     }
-    
-    // Verificar elementos al cargar la página
-    checkScroll();
-    
-    // Verificar elementos al hacer scroll
-    window.addEventListener('scroll', checkScroll);
 
-    // Contador para estadísticas (simulado)
+    // Contador para estadísticas
     const counters = document.querySelectorAll('.counter');
     
-    counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000; // ms
-        const step = target / (duration / 16); // 60fps
-        
-        let count = 0;
-        const updateCounter = () => {
-            count += step;
+    if (utils && utils.initCounters) {
+        utils.initCounters(counters);
+    } else {
+        // Fallback si no se cargaron las utilidades
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // ms
+            const step = target / (duration / 16); // 60fps
             
-            if (count < target) {
-                counter.textContent = Math.floor(count);
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.textContent = target;
-            }
-        };
-        
-        // Iniciar contador cuando sea visible
-        const observer = new IntersectionObserver(entries => {
-            if (entries[0].isIntersecting) {
-                updateCounter();
-                observer.disconnect();
-            }
+            let count = 0;
+            const updateCounter = () => {
+                count += step;
+                
+                if (count < target) {
+                    counter.textContent = Math.floor(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            // Iniciar contador cuando sea visible
+            const observer = new IntersectionObserver(entries => {
+                if (entries[0].isIntersecting) {
+                    updateCounter();
+                    observer.disconnect();
+                }
+            });
+            
+            observer.observe(counter);
         });
-        
-        observer.observe(counter);
-    });
+    }
 
     // Validación de formulario de contacto
     const contactForm = document.getElementById('contact-form');
@@ -101,34 +113,48 @@ document.addEventListener('DOMContentLoaded', function() {
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
+            const subjectInput = document.getElementById('subject'); // Opcional, puede no existir en todos los formularios
             
             let isValid = true;
             
+            // Funciones de utilidad para validación
+            const showErrorFunc = utils && utils.showError ? utils.showError : showError;
+            const removeErrorFunc = utils && utils.removeError ? utils.removeError : removeError;
+            const isValidEmailFunc = utils && utils.isValidEmail ? utils.isValidEmail : isValidEmail;
+            
             // Validar nombre
             if (nameInput.value.trim() === '') {
-                showError(nameInput, 'Por favor, introduce tu nombre');
+                showErrorFunc(nameInput, 'Por favor, introduce tu nombre');
                 isValid = false;
             } else {
-                removeError(nameInput);
+                removeErrorFunc(nameInput);
             }
             
             // Validar email
             if (emailInput.value.trim() === '') {
-                showError(emailInput, 'Por favor, introduce tu email');
+                showErrorFunc(emailInput, 'Por favor, introduce tu email');
                 isValid = false;
-            } else if (!isValidEmail(emailInput.value)) {
-                showError(emailInput, 'Por favor, introduce un email válido');
+            } else if (!isValidEmailFunc(emailInput.value)) {
+                showErrorFunc(emailInput, 'Por favor, introduce un email válido');
                 isValid = false;
             } else {
-                removeError(emailInput);
+                removeErrorFunc(emailInput);
+            }
+            
+            // Validar asunto (si existe)
+            if (subjectInput && subjectInput.value === '') {
+                showErrorFunc(subjectInput, 'Por favor, selecciona un asunto');
+                isValid = false;
+            } else if (subjectInput) {
+                removeErrorFunc(subjectInput);
             }
             
             // Validar mensaje
             if (messageInput.value.trim() === '') {
-                showError(messageInput, 'Por favor, introduce tu mensaje');
+                showErrorFunc(messageInput, 'Por favor, introduce tu mensaje');
                 isValid = false;
             } else {
-                removeError(messageInput);
+                removeErrorFunc(messageInput);
             }
             
             // Si todo es válido, mostrar mensaje de éxito
@@ -148,6 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // Funciones de utilidad locales (fallback si no se carga utils.js)
     function showError(input, message) {
         const formControl = input.parentElement;
         const errorMessage = formControl.querySelector('.error-message') || document.createElement('div');
@@ -215,6 +242,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const telegramLinks = document.querySelectorAll('a[href*="t.me"]');
     
     telegramLinks.forEach(link => {
+        // Verificar y corregir enlaces de Telegram si es necesario
+        const href = link.getAttribute('href');
+        if (href.includes('t.me/+') || href.includes('t.me/zapaton69')) {
+            // Corregir enlaces antiguos
+            if (href.includes('Grupo') || href.includes('grupo') || href.includes('chat') || 
+                href.includes('Chat') || href.includes('icornudox')) {
+                link.setAttribute('href', 'https://t.me/+84TyJvA6VdA4YTVh');
+            } else if (href.includes('Canal') || href.includes('canal') || href.includes('video') || 
+                       href.includes('Video') || href.includes('icornudo')) {
+                link.setAttribute('href', 'https://t.me/+nY1CZhdk3PwyY2Yx');
+            }
+        }
+        
         link.addEventListener('click', function(e) {
             // En un entorno real, aquí se enviaría un evento de analytics
             console.log('Clic en enlace de Telegram:', this.href);

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ICORNUDO | Comunidad de Cuckolding y Hotwife</title>
+    <meta name="description" content="Contacta con el equipo de ICORNUDO. Estamos aquí para responder tus preguntas, escuchar tus sugerencias o ayudarte con cualquier duda sobre nuestra comunidad.">
+    <meta name="keywords" content="contacto icornudo, cuckolding, hotwife, telegram, comunidad adultos">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://icornudo.com/contacto.html">
+    <meta property="og:title" content="Contacto - ICORNUDO | Comunidad de Cuckolding y Hotwife">
+    <meta property="og:description" content="Contacta con el equipo de ICORNUDO. Estamos aquí para responder tus preguntas, escuchar tus sugerencias o ayudarte con cualquier duda.">
+    <meta property="og:image" content="img/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://icornudo.com/contacto.html">
+    <meta property="twitter:title" content="Contacto - ICORNUDO | Comunidad de Cuckolding y Hotwife">
+    <meta property="twitter:description" content="Contacta con el equipo de ICORNUDO. Estamos aquí para responder tus preguntas, escuchar tus sugerencias o ayudarte con cualquier duda.">
+    <meta property="twitter:image" content="img/og-image.jpg">
+    
+    <style>
+        /* Estilos específicos para la página de contacto */
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/contact-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            color: var(--color-light);
+            text-align: center;
+            margin-top: 70px;
+        }
+        
+        .contact-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .contact-hero h1 {
+            font-family: var(--font-secondary);
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-content {
+            padding: 80px 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            background-color: var(--color-light);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h2 {
+            font-family: var(--font-secondary);
+            font-size: 32px;
+            color: var(--color-primary);
+            margin-bottom: 30px;
+        }
+        
+        .contact-method {
+            margin-bottom: 30px;
+        }
+        
+        .contact-method h3 {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--color-secondary);
+        }
+        
+        .contact-method h3 i {
+            margin-right: 10px;
+            color: var(--color-accent);
+            font-size: 24px;
+        }
+        
+        .contact-method p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .contact-method a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--color-primary);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method a:hover {
+            color: var(--color-accent);
+            transform: translateX(5px);
+        }
+        
+        .contact-method a i {
+            margin-right: 8px;
+        }
+        
+        .contact-form-container {
+            background-color: var(--color-light);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form-container h2 {
+            font-family: var(--font-secondary);
+            font-size: 32px;
+            color: var(--color-primary);
+            margin-bottom: 30px;
+        }
+        
+        .form-control {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .form-control label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control input,
+        .form-control textarea,
+        .form-control select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-primary);
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control input:focus,
+        .form-control textarea:focus,
+        .form-control select:focus {
+            border-color: var(--color-primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+        }
+        
+        .form-control textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .form-control .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .form-control.error input,
+        .form-control.error textarea,
+        .form-control.error select {
+            border-color: #e74c3c;
+        }
+        
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .contact-social {
+            margin-top: 40px;
+        }
+        
+        .contact-social h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .social-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        .social-button:hover {
+            transform: translateY(-3px);
+        }
+        
+        .social-button.telegram:hover {
+            background-color: #0088cc;
+            color: white;
+        }
+        
+        .social-button.twitter:hover {
+            background-color: #1DA1F2;
+            color: white;
+        }
+        
+        .faq-section {
+            margin-top: 80px;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 36px;
+            }
+            
+            .contact-info h2,
+            .contact-form-container h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">ICORN<span>UDO</span></a>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#beneficios">Beneficios</a></li>
+                    <li><a href="index.html#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="index.html#telegram">Telegram</a></li>
+                    <li><a href="index.html#testimonios">Testimonios</a></li>
+                    <li><a href="unete.html" class="nav-cta">Únete</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content animate-on-scroll">
+                <h1>Contacto</h1>
+                <p>Estamos aquí para responder tus preguntas y escuchar tus sugerencias</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <h2>Ponte en contacto</h2>
+                    
+                    <div class="contact-method">
+                        <h3><i class="fab fa-telegram"></i> Telegram</h3>
+                        <p>La forma más rápida de contactarnos es a través de nuestro administrador en Telegram.</p>
+                        <a href="https://t.me/zapaton69" target="_blank"><i class="fas fa-arrow-right"></i> @zapaton69</a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3><i class="fab fa-twitter"></i> Twitter</h3>
+                        <p>También puedes encontrarnos en Twitter para noticias y actualizaciones.</p>
+                        <a href="https://x.com/icornudox" target="_blank"><i class="fas fa-arrow-right"></i> @icornudox</a>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <h3><i class="fas fa-users"></i> Comunidad</h3>
+                        <p>Únete a nuestra comunidad para interactuar directamente con nosotros y otros miembros.</p>
+                        <a href="https://t.me/+84TyJvA6VdA4YTVh" target="_blank"><i class="fas fa-arrow-right"></i> Grupo de Telegram</a>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h3>Síguenos en redes sociales</h3>
+                        <div class="social-buttons">
+                            <a href="https://t.me/+nY1CZhdk3PwyY2Yx" class="social-button telegram" target="_blank"><i class="fab fa-telegram"></i></a>
+                            <a href="https://x.com/icornudox" class="social-button twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container animate-on-scroll">
+                    <h2>Envíanos un mensaje</h2>
+                    <form id="contact-form">
+                        <div class="form-control">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" placeholder="Tu nombre" required>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Tu email" required>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label for="subject">Asunto</label>
+                            <select id="subject" required>
+                                <option value="" disabled selected>Selecciona un asunto</option>
+                                <option value="pregunta">Pregunta general</option>
+                                <option value="sugerencia">Sugerencia</option>
+                                <option value="problema">Problema técnico</option>
+                                <option value="colaboracion">Propuesta de colaboración</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" placeholder="Tu mensaje" required></textarea>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label>
+                                <input type="checkbox" required> Acepto la <a href="politica-privacidad.html">política de privacidad</a> y el tratamiento de mis datos
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <div class="section-title">
+                    <h2>Preguntas Frecuentes</h2>
+                    <p>Respuestas a las consultas más comunes</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Cuánto tardan en responder los mensajes?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Intentamos responder a todos los mensajes en un plazo de 24-48 horas. Para consultas urgentes, te recomendamos contactar directamente a través de Telegram.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Puedo proponer contenido para el canal?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>¡Absolutamente! Valoramos las contribuciones de la comunidad. Puedes enviarnos tus propuestas a través de este formulario o directamente en el grupo de Telegram.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Cómo puedo reportar contenido inapropiado o comportamiento inadecuado?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>La seguridad y el respeto son prioritarios en nuestra comunidad. Si encuentras contenido inapropiado o experimentas comportamiento inadecuado, por favor contacta inmediatamente a un administrador a través de Telegram (@zapaton69) o utiliza este formulario seleccionando "Problema" como asunto.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item animate-on-scroll">
+                        <div class="faq-question">
+                            <span>¿Ofrecen oportunidades de colaboración o publicidad?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Estamos abiertos a colaboraciones que aporten valor a nuestra comunidad. Si tienes una propuesta, selecciona "Propuesta de colaboración" en el formulario y detalla tu idea. Evaluaremos cada propuesta individualmente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">ICORN<span>UDO</span></div>
+                <p>La comunidad líder en español dedicada al cuckolding, hotwife y fantasías compartidas.</p>
+                <div class="footer-social">
+                    <a href="https://t.me/+nY1CZhdk3PwyY2Yx" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://x.com/icornudox" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://t.me/zapaton69" target="_blank"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="el-universo.html">Sobre Nosotros</a></li>
+                    <li><a href="explorando-el-cuckolding.html">¿Qué es el Cuckolding?</a></li>
+                    <li><a href="el-placer-compartido-beneficios.html">Beneficios</a></li>
+                    <li><a href="unete.html">Únete</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+                    <li><a href="politica-cookies.html">Política de Cookies</a></li>
+                    <li><a href="descargo-legal.html">Descargo Legal</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Mantente Informado</h3>
+                <p>Recibe notificaciones sobre nuevos contenidos y actualizaciones de la comunidad.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email" required>
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 ICORNUDO. Todos los derechos reservados. Solo para adultos +18.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Volver Arriba -->
+    <a href="#" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Script específico para la página de contacto
+        document.addEventListener('DOMContentLoaded', function() {
+            // Manejo de las preguntas frecuentes
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Validación del formulario de contacto
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const nameInput = document.getElementById('name');
+                    const emailInput = document.getElementById('email');
+                    const subjectInput = document.getElementById('subject');
+                    const messageInput = document.getElementById('message');
+                    
+                    let isValid = true;
+                    
+                    // Validar nombre
+                    if (nameInput.value.trim() === '') {
+                        showError(nameInput, 'Por favor, introduce tu nombre');
+                        isValid = false;
+                    } else {
+                        removeError(nameInput);
+                    }
+                    
+                    // Validar email
+                    if (emailInput.value.trim() === '') {
+                        showError(emailInput, 'Por favor, introduce tu email');
+                        isValid = false;
+                    } else if (!isValidEmail(emailInput.value)) {
+                        showError(emailInput, 'Por favor, introduce un email válido');
+                        isValid = false;
+                    } else {
+                        removeError(emailInput);
+                    }
+                    
+                    // Validar asunto
+                    if (subjectInput.value === '') {
+                        showError(subjectInput, 'Por favor, selecciona un asunto');
+                        isValid = false;
+                    } else {
+                        removeError(subjectInput);
+                    }
+                    
+                    // Validar mensaje
+                    if (messageInput.value.trim() === '') {
+                        showError(messageInput, 'Por favor, introduce tu mensaje');
+                        isValid = false;
+                    } else {
+                        removeError(messageInput);
+                    }
+                    
+                    // Si todo es válido, mostrar mensaje de éxito
+                    if (isValid) {
+                        const successMessage = document.createElement('div');
+                        successMessage.className = 'success-message';
+                        successMessage.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.';
+                        
+                        contactForm.reset();
+                        contactForm.appendChild(successMessage);
+                        
+                        // Eliminar mensaje después de 5 segundos
+                        setTimeout(() => {
+                            successMessage.remove();
+                        }, 5000);
+                    }
+                });
+            }
+            
+            function showError(input, message) {
+                const formControl = input.parentElement;
+                const errorMessage = formControl.querySelector('.error-message') || document.createElement('div');
+                
+                errorMessage.className = 'error-message';
+                errorMessage.textContent = message;
+                
+                if (!formControl.querySelector('.error-message')) {
+                    formControl.appendChild(errorMessage);
+                }
+                
+                formControl.className = 'form-control error';
+            }
+            
+            function removeError(input) {
+                const formControl = input.parentElement;
+                const errorMessage = formControl.querySelector('.error-message');
+                
+                if (errorMessage) {
+                    errorMessage.remove();
+                }
+                
+                formControl.className = 'form-control';
+            }
+            
+            function isValidEmail(email) {
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            }
+        });
+    </script>
+</body>
+</html>

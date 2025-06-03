@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Permitir acceso a todas las páginas principales
+Allow: /index.html
+Allow: /el-universo.html
+Allow: /explorando-el-cuckolding.html
+Allow: /el-placer-compartido-beneficios.html
+Allow: /unete.html
+Allow: /contacto.html
+
+# Permitir acceso a páginas legales
+Allow: /politica-privacidad.html
+Allow: /politica-cookies.html
+Allow: /descargo-legal.html
+
+# No indexar la página de error
+Disallow: /404.html
+
+# Ubicación del sitemap
+Sitemap: https://wolfjafp.github.io/icornudo/sitemap.xml

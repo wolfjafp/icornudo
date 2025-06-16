@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
 
 # Permitir acceso a todas las páginas principales
 Allow: /index.html
@@ -18,4 +20,4 @@ Allow: /descargo-legal.html
 Disallow: /404.html
 
 # Ubicación del sitemap
-Sitemap: https://wolfjafp.github.io/icornudo/sitemap.xml
+Sitemap: https://icornudo.com/sitemap.xml

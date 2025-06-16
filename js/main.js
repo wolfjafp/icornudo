@@ -238,26 +238,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Tracking de clics en enlaces de Telegram (para análisis)
-    const telegramLinks = document.querySelectorAll('a[href*="t.me"]');
-    
-    telegramLinks.forEach(link => {
-        // Verificar y corregir enlaces de Telegram si es necesario
-        const href = link.getAttribute('href');
-        if (href.includes('t.me/+') || href.includes('t.me/zapaton69')) {
-            // Corregir enlaces antiguos
-            if (href.includes('Grupo') || href.includes('grupo') || href.includes('chat') || 
-                href.includes('Chat') || href.includes('icornudox')) {
-                link.setAttribute('href', 'https://t.me/+84TyJvA6VdA4YTVh');
-            } else if (href.includes('Canal') || href.includes('canal') || href.includes('video') || 
-                       href.includes('Video') || href.includes('icornudo')) {
-                link.setAttribute('href', 'https://t.me/+nY1CZhdk3PwyY2Yx');
-            }
+    // Lazy loading para imágenes
+    if ('loading' in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(img => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        // Importar el polyfill de lazy loading
+        const script = document.createElement('script');
+        script.src = 'js/lazysizes.min.js';
+        document.body.appendChild(script);
+    }
+
+    // Optimizar analytics
+    const sendAnalytics = (eventName, eventData) => {
+        if (navigator.sendBeacon) {
+            navigator.sendBeacon('/analytics', JSON.stringify({
+                event: eventName,
+                data: eventData,
+                timestamp: Date.now()
+            }));
         }
-        
+    };
+
+    // Mejora en el tracking de analytics
+    const trackSocialClick = (platform, url) => {
+        console.log(`Click en ${platform}:`, url);
+        // Aquí puedes añadir tu código de analytics
+    };
+
+    document.querySelectorAll('a[href*="x.com"]').forEach(link => {
+        link.addEventListener('click', () => trackSocialClick('X', link.href));
+    });
+});
+            const thankYou = document.createElement('div');
+            thankYou.className = 'thank-you-popup';
+            thankYou.innerHTML = '<p>¡Gracias por unirte! Te esperamos en Telegram.</p>';
+            document.body.appendChild(thankYou);
+            
+            setTimeout(() => {
+                thankYou.remove();
+            }, 3000);
+        });
+    });
+
+    // Tracking de clics en enlaces de redes sociales
+    const socialLinks = document.querySelectorAll('a[href*="x.com"]');
+    
+    socialLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             // En un entorno real, aquí se enviaría un evento de analytics
-            console.log('Clic en enlace de Telegram:', this.href);
+            console.log('Clic en enlace de X:', this.href);
             
             // Añadir clase para efecto visual
             this.classList.add('clicked');
@@ -265,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Opcional: Mostrar mensaje de agradecimiento
             const thankYou = document.createElement('div');
             thankYou.className = 'thank-you-popup';
-            thankYou.innerHTML = '<p>¡Gracias por unirte! Te esperamos en Telegram.</p>';
+            thankYou.innerHTML = '<p>¡Gracias por unirte! Te esperamos en X.</p>';
             document.body.appendChild(thankYou);
             
             setTimeout(() => {

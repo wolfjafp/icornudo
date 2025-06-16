@@ -29,9 +29,9 @@ Este repositorio contiene el código fuente del sitio web oficial de ICORNUDO, u
 ## Comunidad
 
 Únete a nuestra comunidad en:
-- Grupo de Telegram: [t.me/icornudox](https://t.me/icornudox)
-- Canal de Video en Telegram: [t.me/icornudo](https://t.me/icornudo)
+- X (Twitter): [@icornudox](https://x.com/icornudox)
 
 ## Contacto
 
+Para más información, visita [icornudo.com](https://icornudo.com)
 Para más información, visita [icornudo.com](https://icornudo.com)
